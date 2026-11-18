@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>github-user-finder</title>
+    <link rel="stylesheet" href="./finder.css">
+</head>
+<body>
+    <header id="header" class="wrapper">
+        <h1>Github User Finder</h1>
+    </header>
+
+    <main>
+        <section id="input" class="wrapper">
+            <form action="" id="search-form">
+                <label for="input-box">GitHubユーザー名</label>
+                <div class="a">
+                    <input  type="text" 
+                            id="input-box" 
+                            name="input-box" 
+                            placeholder="入力してください"
+                            autocomplete="off">
+                    
+                    <button type="submit" id="search-btn">検索</button>
+                </div>
+            </form>
+            <p id="status" role="status">ユーザー名を調べて検索してください</p>
+        </section>
+
+        <section id="profile" class="wrapper" hidden>
+            <div class="nameid">
+                <img src="https://placehold.jp/150x150.png" alt="avatar" id="avatar">
+                <div>
+                    <h2 id="display-name">NAME</h2>
+                    <p id="login">@あああああ</p>
+                </div>
+            </div>
+            <p id="bio">説明欄</p>
+
+            <dl id="content">
+                <div class="dataes">
+                    <dt class="data-name">公開リポジトリ数</dt>
+                    <dd id="public_repos" class="data"></dd>
+                </div>
+                <div class="dataes">
+                    <dt class="data-name">フォロワー数</dt>
+                    <dd id="followers" class="data"></dd>
+                </div>
+                <div class="dataes">
+                    <dt class="data-name">フォロー数</dt>
+                    <dd id="following" class="data"></dd>
+                </div>
+            </dl>
+
+            <a href="" id="profile-link">Githubプロフィールを開く</a>
+        </section>
+    </main>
+    
+    <footer id="footer" class="wrapper">
+        <p>GitHub公開APIを利用</p>
+        <p>&copy; 2026 11-13</p>
+    </footer>
+
+    <script src="./finder.js" defer></script>
+</body>
+</html>
